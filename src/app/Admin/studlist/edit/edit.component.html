@@ -1,0 +1,136 @@
+<br><br><br><br>
+
+<h3>edit student works!</h3>
+
+<a routerLink="/admin/studlist" class="btn btn-secondary btn-lg active" style="margin-left: 80%;" role="button" aria-pressed="true">Back to List</a>
+
+<div class="container py-5">
+
+    <form #studForm="ngForm" (ngSubmit)="Updatestud(studForm.value)" id="abc">
+        <div class="form-group row">
+          <label for="sname" class="col-sm-2 col-form-label">Stud.Name</label>
+          <div class="col-sm-10">
+            <input type="text" #sname="ngModel" class="form-control" name="Name" id="sname" [(ngModel)]=datafrmsrvr.Name>
+          </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="sclass" class="col-sm-2 col-form-label">Class</label>
+            <div class="col-sm-10">
+              <input type="number"  min="1" max="10" class="form-control" name="Class" id="sclass" [(ngModel)]=datafrmsrvr.Class disabled>
+            </div>
+          </div>
+
+          
+        <div class="form-group row">
+            <label for="role" class="col-sm-2 col-form-label">Role</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="Role_id" id="role" placeholder="Student=2 or Admin=1" [(ngModel)]=datafrmsrvr.Role_id>
+            </div>
+          </div>
+
+
+        <div class="form-group row">
+            <label for="cntno" class="col-sm-2 col-form-label">Contact no</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="MobileNo" id="cntno" [(ngModel)]=datafrmsrvr.MobileNo >
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="Email" id="email" [(ngModel)]=datafrmsrvr.Email>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="pwd" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="Password" id="pwd" [(ngModel)]=datafrmsrvr.Password>
+            </div>
+            
+          </div>
+
+
+          <div class="form-group row">
+              <label for="dob" class="col-sm-2 col-form-label">DOB</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="DOB" id="dob" [(ngModel)]=datafrmsrvr.DOB>
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="street" class="col-sm-2 col-form-label">Street</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="Street" id="street" [(ngModel)]=datafrmsrvr.Street>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                  <label for="city" class="col-sm-2 col-form-label">City</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="City" id="city" [(ngModel)]=datafrmsrvr.City>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="state" class="col-sm-2 col-form-label">State</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="State" id="state" [(ngModel)]=datafrmsrvr.State>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label for="country" class="col-sm-2 col-form-label">Country</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" name="Country" id="country" [(ngModel)]=datafrmsrvr.Country>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="pin" class="col-sm-2 col-form-label">Postal Code</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="PostalCode" id="pin" [(ngModel)]=datafrmsrvr.PostalCode>
+                        </div>
+                      </div>
+
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Gender" id="Gender1" value="M"  [(ngModel)]=datafrmsrvr.Gender>
+                  <label class="form-check-label" for="Gender1">
+                    Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Gender" id="Gender2" value="F" [(ngModel)]=datafrmsrvr.Gender>
+                  <label class="form-check-label" for="Gender2">
+                    Female
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Gender" id="Gender3" value="Other"  [(ngModel)]=datafrmsrvr.Gender>
+                  <label class="form-check-label" for="Gender3">
+                    Other
+                  </label>
+                </div>
+                
+              </div>
+            </div>
+          </fieldset>
+        
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Update Record</button>
+          </div>
+        </div>
+
+       
+        
+      </form>
+
+</div>
+
