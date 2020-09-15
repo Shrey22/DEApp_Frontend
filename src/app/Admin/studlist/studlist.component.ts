@@ -69,7 +69,7 @@ export class StudlistComponent implements OnInit {
      if(result.Status == "Records Found.")
      {
          this.sortedlistbyname = result.Data;
-         alert("Records Found.")
+        // alert("Records Found.")
         this.ngOnInit();
       
      }
